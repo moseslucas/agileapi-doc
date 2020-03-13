@@ -1,15 +1,16 @@
-# gatsby-starter-documentation
+# Agile API Documentation
+Built with Gatsby.js
 
-A minimalist starter for
-[gatsby-theme-documentation](https://github.com/johno/gatsby-theme-documentation).
 
-![image](https://user-images.githubusercontent.com/1424573/61085901-ace8e980-a3ee-11e9-84d2-45acbb200fea.png)
+## How to edit contents
+All markdown are located in `/docs`
+```
 
-## Installation
-
-```sh
-gatsby new my-docs-site johno/gatsby-starter-documentation
-cd my-docs-site
+docs
+|- cargo-cover.mdx
+|- cyber-care.mdx 
+|- parcel-cover.mdx
+|- products.mdx
 ```
 
 ## Usage
