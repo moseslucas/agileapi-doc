@@ -1,0 +1,67 @@
+# Cargo Cover
+Cargo insurance provides protection against all risks of physical loss or damage to freight from any external cause during shipping, whether by land, sea or air.
+<hr />
+
+
+| Paramter   		| Type   |                      Description                                       |
+|-----------------|:------:|-----------------------------------------------------------------------:|
+| product 				| String | The product slug: "cargo" 																					|
+| origin_country 						| String | The Alpha-2 code <br />for the country where the <br />goods begin their journey. <br />Must be a value from the <br />list supplied by <br />product info 												|
+| destination_country | String | The Alpha-2 code for the country <br />where the goods ill end <br /> their journey. Must be a value <br /> from the list supplied by product info 																|
+| transport_mode 	| String | The transport method used <br /> to ship the goods, must <br /> be a value from the list <br/> supplied by product info 	|
+| items 				| Number | An array of items to be insured, see below																	|
+| region 					| String | The state where the shipper <br/> of the goods resides                                     |
+| name 						| String | The name of the person <br/> responsible for the policy                      |
+| email 					| String | 	The email address of <br/> the person responsible for the policy             |
+| name_of_insured <br />(optional)	 					| String | 	The name of a business or another <br/> person who is the actual policy holder             |
+
+
+#
+##### Each Item in the array of `items` must contain to the following parameters:
+#
+
+| Paramter   		| Type   |                      Description                                       |
+|-----------------|:------:|-----------------------------------------------------------------------:|
+| insured_item_category |  String | The category of the item, the <br/> identifer of a value from the list of <br/> categories supplied by product info |
+| insured_item_description |    String   |   A text description of the item |
+| insured_item_value	 | Number |    The value of the item in dollars |
+
+## Minimum Parameters to get a quote
+
+```json
+{
+  "product": "cargo",
+  "origin_country": "AU",
+  "destination_country": "AU",
+  "transport_mode": "LND",
+  "items": [
+    {
+      "insured_item_category": "BOOK",
+      "insured_item_description": "Rare books",
+      "insured_item_value": "3575"
+    }
+  ],
+  "region": "VIC"
+}
+```
+
+## All Paramters
+```json
+{
+  "product": "cargo",
+  "origin_country": "AU",
+  "destination_country": "AU",
+  "transport_mode": "LND",
+  "items": [
+    {
+      "insured_item_category": "BOOK",
+      "insured_item_description": "Rare books",
+      "insured_item_value": "3575"
+    }
+  ],
+  "region": "VIC",    
+  "name": "Mary Smith",
+  "email": "marysmith@example.com"
+}
+```
+

@@ -1,0 +1,29 @@
+# Products
+<hr />
+
+See each product page for requirements specific to that product. Each one has its own fields that are required to create the quote, and others to bind the quote.
+
+
+## Common Parameters - Required
+The following parameters are applicable to all products, and are not required to get a quote, but they are required before the quote can be bound:
+
+***<small>name</small>***
+
+This is generally the name of the person getting the quote. For an individual, it is most likely the policy holder, although in some cases it may be the person buying the policy for someone else. If that is the case, the `name_of_insured` parameter must name the other party.
+
+This name will be used to create a user account so this person can log in to their Agile portal and view and manage their policy.
+
+***<small>email</small>***
+
+The email address of the person named above. This will be the address the policy documents will be sent to, and this address will act as the log in to the Agile portal
+
+***<small>name_of_insured</small>***
+
+This is required for some products (where the policy is for a business, for example) and optional for others. See the description for the `name` parameter to see where you might want to provide this parameter when it is optional
+
+## Common Parameters - Optional
+In addition to the required fields, you may optionally provide the following:
+
+***<small>custom_field</small>***
+
+This is a string parameter that can be used for anything you choose. We do not validate or use the values supplied in this parameter, but it may be helpful for you to supply to help with your own reporting, or for identifying your own customers.

@@ -1,0 +1,82 @@
+# Cyber Care
+Cyberattacks and data breach protection
+<hr />
+
+## Paramter Explanations
+
+| Paramter   		| Type   |                      Description                                       |
+|-----------------|:------:|-----------------------------------------------------------------------:|
+| product 				| String | The product slug: "cybercare" 																					|
+| plan 						| String | The identifier of the plan <br/>that has been chosen 												|
+| name_of_insured | String | The name of the business <br/>being covered 																|
+| business_type 	| String | The type of business - see below <br />for list of accepted bussiness types 	|
+| revenue 				| Number | The revenue for last year, in dollars																	|
+| region 					| String | The state the business is based in                                     |
+| name 						| String | The name of the person <br/>responsible for the policy                      |
+| email 					| String | The email address of the <br/> person responsible for the policy             |
+
+
+## Minimum Parameters to get a quote
+
+```json
+{
+  "product": "cybercare",
+  "plan": "premium_0"
+}
+```
+
+## All Paramters
+```json
+{
+  "product": "cybercare",
+  "plan": "premium_0",
+  "name_of_insured": "My Business Pty Ltd",
+  "name": "Mary Smith",
+  "email": "marysmith@example.com",
+  "business_type": "Consultant",
+  "revenue": "130000",
+  "region": "VIC"
+}
+```
+
+
+## Supporting Info
+### Business Types
+The following are acceptable values for the `business_type` parameter:
+
+*	Agriculture
+*	Accountant
+*	Advertising/Marketing Services
+*	Architect
+*	Association
+*	Car Dealership
+*	Charities / Not for profit / Library / Museum
+*	Chemists/Pharmaciea
+*	Communication Services
+*	Commercial Drone Operator
+*	Construction
+*	Consultant
+*	Education Services
+*	Employment/Recruitment Agency
+*	Engineer
+*	Government/Public Administration
+*	Hotel
+*	Human Resource Services
+*	Legal Services
+*	Manufacturing
+*	Media Services
+*	Nursing/Retirement Homes
+*	Payroll Services Provider
+*	Printing and Publishing
+*	Professional Services
+*	Real Estate Agent/Property Manager
+*	Restaurant
+*	Retail
+*	Sports Club/Gym
+*	Tax Agents
+*	Technology Professional
+*	Transport
+*	Union
+*	Veterinarian Practice
+*	Wholesale Distributor
+*	Other
